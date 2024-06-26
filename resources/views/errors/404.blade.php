@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class=" bg-gray-200 text-black font-sans flex justify-center items-center h-screen">
+<body class=" bg-gray-100 text-black font-sans flex justify-center items-center h-screen">
 
     <div class="container mx-auto text-center">
         <h1 class="text-6xl font-bold">404</h1>
@@ -18,7 +18,7 @@
         </div>
         <p class="text-lg mb-8">We apologize, but there are no secrets to be found here.</p>
         <a href="{{ url('/') }}"
-            class="inline-block bg-white text-purple-900 px-6 py-3 rounded-lg text-lg font-medium transition duration-300 hover:bg-purple-800 hover:text-white">Go
+            class="inline-block bg-white text-blue-700 px-6 py-3 rounded-lg text-lg font-medium transition duration-300 hover:bg-blue-600 hover:text-white">Go
             Home</a>
     </div>
 

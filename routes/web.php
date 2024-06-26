@@ -33,4 +33,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('video-games', VideoGameController::class);
 });
 
+
+
 require __DIR__ . '/auth.php';
