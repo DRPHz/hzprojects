@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  mysql:
+    build:
+      context: .
+      dockerfile: database/Dockerfile.mysql
+    container_name: my-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: dockerisleuk
+      MYSQL_DATABASE: dockerdb
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-php-app
+    depends_on:
+      - mysql
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/var/www/html
+    command: php artisan serve --host=0.0.0.0 --port=8000
+
+  phpmyadmin:
+    build:
+      context: .
+      dockerfile: phpmyadmin/Dockerfile.phpmyadmin
+    container_name: my-phpmyadmin
+    depends_on:
+      - mysql
+    environment:
+      PMA_HOST: my-mysql
+      MYSQL_ROOT_PASSWORD: dockerisleuk
+    ports:
+      - "8080:80"
+
+volumes:
+  mysql-data:
