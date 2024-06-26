@@ -12,7 +12,7 @@
 
     <div class="container mx-auto text-center">
         <h1 class="text-6xl font-bold">404</h1>
-        <h2 class="text-4xl mb-4">Level not Found</h2>
+        <h2 class="text-4xl mb-4">Page not Found</h2>
         <div class="mb-8">
             <img src="{{ asset('images/404-image.png') }}" alt="404 Image" class="max-w-xs mx-auto">
         </div>
