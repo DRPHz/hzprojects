@@ -22,12 +22,9 @@
         <a href="{{ url('/') }}"
             class="inline-block bg-white text-blue-700 px-6 py-3 rounded-lg text-lg font-medium transition duration-300 hover:bg-blue-600 hover:text-white">Go
             Home</a>
-        <form action="{{ url()->current() }}" method="POST" style="display: inline;">
-            @csrf
-            <button type="submit"
-                class="ml-4 inline-block bg-white text-blue-700 px-6 py-3 rounded-lg text-lg font-medium transition duration-300 hover:bg-blue-600 hover:text-white">Try
-                Again</button>
-        </form>
+        <button onclick="window.location.reload()"
+            class="ml-4 inline-block bg-white text-blue-700 px-6 py-3 rounded-lg text-lg font-medium transition duration-300 hover:bg-blue-600 hover:text-white">Try
+            Again</button>
     </div>
 
 </body>
