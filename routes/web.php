@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideoGameController;
+use App\Http\Controllers\DeveloperController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,11 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('video-games', VideoGameController::class);
 });
 
+Route::middleware(['auth'])->group(function () {
+    Route::resource('developers', DeveloperController::class);
+    Route::get('developers/{developer}/verify-password', [DeveloperController::class, 'showVerifyPasswordForm'])->name('developers.showVerifyPasswordForm');
+    Route::post('developers/{developer}/verify-password', [DeveloperController::class, 'verifyPassword'])->name('developers.verifyPassword');
+});
 
 
 require __DIR__ . '/auth.php';

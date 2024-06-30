@@ -17,6 +17,11 @@
                             <a href="{{ route('video-games.index') }}" class="btn btn-primary">Manage Video Games</a>
                         </div>
                     </div>
+                    <div class="bg-grey overflow-hidden shadow-sm sm:rounded-lg mt-4">
+                        <div class="p-6 text-gray-900">
+                            <a href="{{ route('developers.index') }}" class="btn btn-primary">Manage developers</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 </x-app-layout>
