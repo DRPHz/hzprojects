@@ -9,7 +9,7 @@
             @method('POST')
 
             <div class="mb-4">
-                <label for="name" class="block font-medium">Name</label>
+                <label for="name" class="block font-medium">Name&#42;</label>
                 <input type="text" name="name" id="name"
                     class="form-input w-full rounded-md shadow-sm border-2 @error('name') border-red-500 @enderror"
                     placeholder="Enter Developer's Name">
@@ -19,7 +19,7 @@
             </div>
 
             <div class="mb-4">
-                <label for="website" class="block font-medium">Website</label>
+                <label for="website" class="block font-medium">Website&#42;</label>
                 <input type="url" name="website" id="website"
                     class="form-input w-full rounded-md shadow-sm border-2 @error('website') border-red-500 @enderror"
                     placeholder="https://example.com">
@@ -34,7 +34,7 @@
             </div>
 
             <div class="mb-4">
-                <label for="password" class="block font-medium">Password</label>
+                <label for="password" class="block font-medium">Password&#42;</label>
                 <input type="password" id="password" name="password"
                     class="form-input w-full rounded-md shadow-sm border-2 @error('password') border-red-500 @enderror"
                     placeholder="Enter your password">
@@ -51,7 +51,7 @@
             </div>
 
             <div class="mb-4">
-                <label for="password_confirmation" class="block font-medium">Confirm Password</label>
+                <label for="password_confirmation" class="block font-medium">Confirm Password&#42;</label>
                 <input type="password" name="password_confirmation" id="password_confirmation"
                     class="form-input w-full rounded-md shadow-sm border-2 @error('password_confirmation') border-red-500 @enderror"
                     placeholder="Confirm your password">
